@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.hibernate.nativesql.Student"
+		table="tbl_students">
+
+		<meta attribute="class-description">
+			This class contains the Students detail.
+		</meta>
+
+		<id name="studentId" type="int" column="s_id">
+			<generator class="increment" />
+		</id>
+		<property name="studentName" column="s_name" type="string" />
+		<property name="address" column="s_address" type="string" />
+		<property name="age" column="s_age" type="int" />
+
+	</class>
+</hibernate-mapping>
